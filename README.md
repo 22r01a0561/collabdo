@@ -1,31 +1,72 @@
 # 📌 CollabDo - Multi-User Collaborative To-Do List Web App
 
-**CollabDo** is a collaborative to-do list web app that allows teams to efficiently organize, assign, and track tasks. With seamless user authentication, role-based access, and real-time updates, CollabDo makes teamwork effortless. Owners can create lists, invite team members, and manage tasks while ensuring transparency and productivity. 🚀✅
+CollabDo is a powerful and user-friendly collaborative to-do list web application. It enables teams to efficiently organize, assign, and track tasks with real-time updates and role-based access control. Whether you're managing personal projects or working with a team, CollabDo simplifies task collaboration. 🚀✅
 
-## 🚀 Features
+---
 
-✅ **User Authentication** (Signup/Login with JWT)  
-✅ **Task Management** (Create, Read, Update, Delete)  
-✅ **Team Collaboration** (Invite members to view lists)  
-✅ **Role-Based Access** (Owner & Member permissions)  
-✅ **Real-Time Updates** (Live sync for team members)  
-✅ **Email Invitations** (Invite users via email)  
-✅ **Dark Mode Support** 🌙  
+## 🔥 Key Features
+
+### ✅ User Authentication
+
+- Secure **Signup/Login** using JWT authentication.
+- Password encryption for better security.
+
+### ✅ Task & List Management
+
+- Users can **create, edit, delete** to-do lists.
+- Each list contains multiple **tasks with statuses** (Pending, In Progress, Completed).
+
+### ✅ Team Collaboration
+
+- Owners can **invite members** to view and contribute to lists.
+- Team members can **collaborate in real-time**.
+
+### ✅ Role-Based Access Control
+
+- **Owners** can create lists, add tasks, and invite members.
+- **Members** can view and complete assigned tasks.
+
+### ✅ Real-Time Updates
+
+- Changes are **instantly reflected** for all users.
+- Ensures smooth collaboration.
+
+### ✅ Email Invitations
+
+- Invite users via **email notifications** to join lists.
+
+### ✅ Dark Mode Support 🌙
+
+- Toggle between **light and dark mode** for better UX.
+
+---
 
 ## 🛠️ Tech Stack
 
 ### **Frontend:**
+
 - React (Next.js)
-- TailwindCSS (for UI design)
+- TailwindCSS (for styling)
 - Context API (for state management)
 
 ### **Backend:**
+
 - Node.js + Express.js
 - MongoDB (Mongoose for schema modeling)
-- JWT Authentication
-- Nodemailer (for sending invitations)
+- JWT Authentication (for secure login)
+- Nodemailer (for sending email invites)
+
+### **Other Tools:**
+
+- GitHub (Version Control)
+- Postman (API Testing)
+- Vercel/Netlify (Frontend Deployment)
+- Render/Heroku (Backend Deployment)
+
+---
 
 ## 📁 Project Structure
+
 ```
 collabdo/
 │── backend/                   # Express.js backend
@@ -88,15 +129,19 @@ collabdo/
 ├── .gitignore                   # Ignore Node Modules, etc.
 ```
 
-## 📌 Installation & Setup
+---
+
+## 🚀 Getting Started
 
 ### **1️⃣ Clone the Repository**
+
 ```sh
 git clone https://github.com/your-username/collabdo.git
 cd collabdo
 ```
 
 ### **2️⃣ Backend Setup**
+
 ```sh
 cd backend
 npm install
@@ -105,13 +150,17 @@ npm start
 ```
 
 ### **3️⃣ Frontend Setup**
+
 ```sh
 cd frontend
 npm install
 npm run dev
 ```
 
+---
+
 ## 🔑 Environment Variables (.env Example)
+
 ```env
 # Backend
 MONGO_URI=your-mongodb-connection-string
@@ -123,25 +172,33 @@ EMAIL_PASS=your-email-password
 NEXT_PUBLIC_API_URL=http://localhost:5000
 ```
 
+---
+
 ## 🚀 API Endpoints
 
-| Method | Endpoint | Description |
-|--------|---------|-------------|
-| POST   | /api/auth/register | Register new user |
-| POST   | /api/auth/login | User login |
-| POST   | /api/lists | Create a new to-do list (Owner only) |
-| GET    | /api/lists/:id | Get list details (Owner & Members) |
-| POST   | /api/invites | Send invitation to members |
-| POST   | /api/invites/accept | Accept an invitation |
+| Method | Endpoint            | Description                          |
+| ------ | ------------------- | ------------------------------------ |
+| POST   | /api/auth/register  | Register new user                    |
+| POST   | /api/auth/login     | User login                           |
+| POST   | /api/lists          | Create a new to-do list (Owner only) |
+| GET    | /api/lists/\:id     | Get list details (Owner & Members)   |
+| POST   | /api/invites        | Send invitation to members           |
+| POST   | /api/invites/accept | Accept an invitation                 |
+
+---
 
 ## 🤝 Contributing
+
 1. Fork the repo
 2. Create a new branch (`git checkout -b feature-branch`)
 3. Commit your changes (`git commit -m "Added new feature"`)
 4. Push to your branch (`git push origin feature-branch`)
 5. Open a Pull Request 🎉
 
+---
+
 ## 📜 License
+
 This project is licensed under the **MIT License**.
 
 ---
