@@ -25,30 +25,67 @@
 - JWT Authentication
 - Nodemailer (for sending invitations)
 
-## 📂 Project Structure
+## 📁 Project Structure
 ```
-collabdo/
-│── backend/
-│   ├── config/              # Database & JWT Configs
-│   ├── models/              # Database Schemas (User, List)
-│   ├── routes/              # API Routes (Auth, Lists, Invites)
-│   ├── controllers/         # Business Logic
-│   ├── middleware/          # Auth Middleware
-│   ├── utils/               # Utility Functions (Email, etc.)
-│   ├── server.js            # Main Express Server File
+todo-app/
+│── backend/                   # Express.js backend
+│   ├── config/                # Database & JWT Configs
+│   │   ├── db.js              # MongoDB connection
+│   │   ├── auth.js            # JWT authentication
+│   │
+│   ├── models/                # Database Schemas
+│   │   ├── User.js            # User Model
+│   │   ├── List.js            # To-Do List Model
+│   │
+│   ├── routes/                # API Routes
+│   │   ├── authRoutes.js      # Signup/Login Routes
+│   │   ├── listRoutes.js      # List CRUD Routes
+│   │   ├── inviteRoutes.js    # Invitation System
+│   │
+│   ├── controllers/           # Business Logic
+│   │   ├── authController.js  # User Authentication Logic
+│   │   ├── listController.js  # To-Do List Logic
+│   │   ├── inviteController.js # Team Member Invitation Logic
+│   │
+│   ├── middleware/            # Middleware (Auth, Error Handling)
+│   │   ├── authMiddleware.js  # Protect Routes
+│   │
+│   ├── utils/                 # Utility Functions (Email, etc.)
+│   │   ├── sendInvite.js      # Send Invitation Emails
+│   │
+│   ├── server.js              # Main Express Server File
 │
-│── frontend/
+│── frontend/                  # React (Next.js) Frontend
 │   ├── src/
-│   │   ├── components/      # UI Components
-│   │   ├── pages/           # Next.js Pages
-│   │   ├── context/         # Global State (Auth, Lists)
-│   │   ├── services/        # API Calls (Auth, Lists)
-│   │   ├── styles/          # Tailwind CSS
-│   ├── next.config.js       # Next.js Configuration
+│   │   ├── components/        # Reusable UI Components
+│   │   │   ├── TaskItem.js    # Individual Task Component
+│   │   │   ├── InviteForm.js  # Invite Members Component
+│   │   │   ├── Navbar.js      # Navbar Component
+│   │   │
+│   │   ├── pages/             # Next.js Pages
+│   │   │   ├── index.js       # Home Page (Lists)
+│   │   │   ├── login.js       # Login Page
+│   │   │   ├── register.js    # Register Page
+│   │   │   ├── list/[id].js   # List Details Page
+│   │   │
+│   │   ├── context/           # Global State Management
+│   │   │   ├── AuthContext.js # Authentication Context
+│   │   │   ├── ListContext.js # Lists & Tasks Context
+│   │   │
+│   │   ├── services/          # API Calls (Frontend)
+│   │   │   ├── authService.js # API calls for authentication
+│   │   │   ├── listService.js # API calls for lists & tasks
+│   │   │
+│   │   ├── styles/            # Tailwind CSS / Global Styles
+│   │   │   ├── globals.css    # Global Styles
+│   │
+│   ├── next.config.js         # Next.js Configuration
+│   ├── package.json           # Frontend Dependencies
 │
-├── .env                     # Environment Variables
-├── README.md                # Project Documentation
-├── package.json             # Dependencies
+├── .env                       # Environment Variables
+├── README.md                   # Project Documentation
+├── package.json                # Root Dependencies
+├── .gitignore                   # Ignore Node Modules, etc.
 ```
 
 ## 📌 Installation & Setup
