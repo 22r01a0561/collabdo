@@ -27,7 +27,7 @@
 
 ## 📁 Project Structure
 ```
-todo-app/
+collabdo/
 │── backend/                   # Express.js backend
 │   ├── config/                # Database & JWT Configs
 │   │   ├── db.js              # MongoDB connection
