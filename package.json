@@ -1,0 +1,21 @@
+{
+  "name": "collabdo",
+  "version": "1.0.0",
+  "description": "CollabDo is a powerful and user-friendly collaborative to-do list web application. It enables teams to efficiently organize, assign, and track tasks with real-time updates and role-based access control. Whether you're managing personal projects or working with a team, CollabDo simplifies task collaboration. 🚀✅",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/22r01a0561/collabdo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/22r01a0561/collabdo/issues"
+  },
+  "homepage": "https://github.com/22r01a0561/collabdo#readme"
+}
